@@ -1,0 +1,75 @@
+import React from 'react'
+import database from './memedata';
+
+function Form(){
+    const [MemeImage, setNewMeme] = React.useState(" ");
+    function getMemeImage(){
+        const memeArrayNO = database.data.memes;
+        const randomNumber = Math.floor(Math.random() * memeArrayNO);
+        setNewMeme(memeArrayNO[randomNumber].url)
+     
+    }
+    return(
+        <main>
+            <form class="form">
+                <div class="form--content">
+                    <div>
+                        <input 
+                            type="text" 
+                            placeholder="Top text" 
+                            className="form--input" 
+                            name='input-1'
+                        /> 
+                            &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+
+                        <input 
+                            type="text"
+                            placeholder='Bottom text'
+                            className="form--input"
+                            name='input-2'
+                        />
+                    </div>
+                     <button onClick={getMemeImage} className="form--button">
+                            
+                            Get a new meme image  🖼
+                            
+                            </button>
+                </div>
+            </form>
+            <img src={MemeImage} alt="Missing"/>
+        </main>
+        
+    )
+}
+export default Form;
+
+
+
+main {
+  padding: 36px;
+}
+.form{
+  display: flex;
+  justify-content: center;
+}
+.form--content{
+  display: grid;
+  grid-gap: 20px;
+  
+}
+.form--input{
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  text-indent: 5px;
+  padding-right : 100px;
+  padding-top: 20px;
+  padding-bottom:3px;
+  font-size :17px;
+  
+}
+.form--button {
+  padding: 12px;
+  border-radius: 9px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+}
