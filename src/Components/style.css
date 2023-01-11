@@ -59,21 +59,25 @@ main {
     color: white;
     border: none;
     cursor: pointer;
+    height: 30px;
 }
-
-
-.meme--image{
-    width: 100%;
-    border-radius: 3px;
-    
-}
+.meme-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+ }
 .meme {
     position: relative;
+    padding-top: 20px;
+    width: 70%; 
 }
 
 .meme--image {
     max-width: 100%;
-    border-radius: 3px;
+    height: auto;
+    border-radius: 35px;
+    border:3px solid gray;
+
 }
 
 .meme--text {
@@ -103,7 +107,27 @@ main {
 .bottom {
     bottom: 0;
 }
-
 .top {
     top: 0;
+    padding-top: 15px;
+}
+.left{
+    top: 0;
+    left: 0;
+    margin-top: 50%;
+    margin-left: 150px;
+}
+.right{
+    top: 0;
+    right: -100;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+footer{
+    background-color: #672280;
+    color: white;
+    bottom: 0;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
 }

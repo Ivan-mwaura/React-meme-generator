@@ -1,6 +1,7 @@
 import React from 'react';
-import Navbar from './Components/Navigation';
-import Form from './Components/form';
+import Navbar from './Components/Navigation'
+import Form from './Components/form'
+import Footer from './Components/footer'
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <div>
             <Navbar/>
             <Form/>
-    
+            <Footer/>
         </div>
     )
 }
