@@ -1,5 +1,5 @@
 import React from "react"
-
+import useWindowSize from './window-size'
 
 export default function Meme() {
    //const [memeImage, setMemeImage] = React.useState("")
@@ -8,7 +8,7 @@ export default function Meme() {
      * - Below the div.form, add an <img /> and set the
      *   src to the new `memeImage` state you created
      */
-    
+   const {width} = useWindowSize();
 const [allMemeImages,setAllMemeImages] = React.useState([])
 
 React.useEffect(() => {
@@ -97,6 +97,7 @@ function handleChange(event){
                 </button>
             </div>
             <section className="meme-container">
+                { width > 500 &&
                 <div className="meme">
                     <img src={meme.randomImage} alt={"Missing"} className="meme--image" />
                     <h1 className="meme--text top"> {meme.topText}</h1>
@@ -104,6 +105,7 @@ function handleChange(event){
                     <h3 className="meme--text left">{meme.leftText}</h3>
                     <h4 className="meme--text right"> {meme.rightText}</h4>
                 </div>
+                }
             </section>
            
         </main>
