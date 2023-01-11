@@ -20,6 +20,19 @@ main {
     height:70px; 
     color:white;
     font-family: "Karla", sans-serif;
+    width: 100%;
+  margin: 0 auto;
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+    width: 75%;
+    background-color: green;
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+    width: 50%;
+}
 }
 .nav--logo{
     width: 70px;
@@ -65,7 +78,20 @@ main {
     display: flex;
     justify-content: center;
     padding-top: 15px;
+    width: 100%;
+  margin: 0 auto;
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+    width: 75%;
+    background-color: green;
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+    width: 50%;
  }
+}
 .meme {
     position: relative;
     padding-top: 20px;
@@ -130,4 +156,16 @@ footer{
     display: flex;
     font-size: 14px;
     justify-content: center;
+   margin: 0 auto;
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+    width: 75%;
+    background-color: green;
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+    width: 50%;
+}
 }
